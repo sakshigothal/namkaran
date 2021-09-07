@@ -15,7 +15,20 @@ class HinduListPage extends StatefulWidget {
 class _HinduListPageState extends State<HinduListPage> {
   var contarr=[];
   
-  Map<String,dynamic> response={};
+  late List<HinduCatResponse> response;
+
+callApi() async{
+    var resp= await http.get(Uri.parse("http://mapi.trycatchtech.com/v1/naamkaran/post_list_by_cat_and_gender?category_id=8&gender=1"),);
+    print(resp.body);
+    
+
+    // contarr=json.decode(resp.body);
+    // print("$contarr");
+    // HinduCatResponse ss= HinduCatResponse.fromJson(response);
+    // response=contarr[ss.meaning];
+    // print(ss.categoryId);
+  }
+
   @override
   void initState() {
     // TODO: implement initState
@@ -28,18 +41,11 @@ class _HinduListPageState extends State<HinduListPage> {
       body: Container(
         color: Colors.blue,
         child: ListView.builder(itemCount: contarr.length,itemBuilder: (context,index){
-          return ListTile(leading: Text("$response"),);
+          return ListTile(leading: Text(""),);
         })
       ),
     );
   }
 
-  callApi() async{
-    var resp= await http.get(Uri.parse("http://mapi.trycatchtech.com/v1/naamkaran/post_list_by_cat_and_gender?category_id=8&gender=1"),);
-    print("$resp");
-    response=json.decode(resp.body);
-    print("$response");
-    HinduCatResponse ss= HinduCatResponse.fromJson(response);
-    print("");
-  }
+  
 }
