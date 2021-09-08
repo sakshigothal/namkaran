@@ -15,12 +15,14 @@ class HinduListPage extends StatefulWidget {
 class _HinduListPageState extends State<HinduListPage> {
   var contarr=[];
   
-  late List<HinduCatResponse> response;
+  // late List<HinduCatResponse> response;
 
 callApi() async{
     var resp= await http.get(Uri.parse("http://mapi.trycatchtech.com/v1/naamkaran/post_list_by_cat_and_gender?category_id=8&gender=1"),);
     print(resp.body);
-    
+    List respnse=jsonDecode(resp.body);
+    // HinduCatResponse hcr=HinduCatResponse.fromJson();
+    // print(hcr);
 
     // contarr=json.decode(resp.body);
     // print("$contarr");

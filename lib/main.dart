@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 import 'cards.dart';
+import 'listpage.dart';
+import 'whetherapi.dart';
 
 void main() {
   runApp(MaterialApp(home: SplashScreen()));
@@ -23,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (BuildContext ctx) => CategoryCard(),
+          builder: (BuildContext ctx) => HinduListPage(),
         ),
       );
     });
