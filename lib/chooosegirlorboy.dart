@@ -20,61 +20,76 @@ class _ChooseGirlOrBoyState extends State<ChooseGirlOrBoy> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.pink[200],
         child: Center(
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              GestureDetector(
-                child: Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(70),
-                    color: Colors.amber,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Girls",
-                      style: TextStyle(fontSize: 40),
-                    ),
-                  ),
-                ),
-                onTap: () {
-                  Common.gender = "2";
-                  print(Common.gender);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext ctx) => HinduListPage()));
-                },
+              Text(
+                "Choose Your Choice",
+                style: TextStyle(fontSize: 50),
+                textAlign: TextAlign.center,
               ),
               SizedBox(
-                width: 30,
+                height: 40,
               ),
-              GestureDetector(
-                child: Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(70),
-                    color: Colors.amber,
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Boys",
-                      style: TextStyle(fontSize: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    child: Container(
+                      height: 150,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(70),
+                        color: Colors.pink,
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Girls",
+                          style: TextStyle(fontSize: 40),
+                        ),
+                      ),
                     ),
+                    onTap: () {
+                      Common.gender = "2";
+                      print(Common.gender);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext ctx) => HinduListPage()));
+                    },
                   ),
-                ),
-                onTap: () {
-                  Common.gender = "1";
-                  print(Common.gender);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext ctx) => HinduListPage()));
-                },
+                  SizedBox(
+                    width: 30,
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      height: 150,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(70),
+                        color: Colors.pink,
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Boys",
+                          style: TextStyle(fontSize: 40),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      Common.gender = "1";
+                      print(Common.gender);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext ctx) => HinduListPage()));
+                    },
+                  ),
+                ],
               ),
             ],
           ),

@@ -27,13 +27,27 @@ class _CardsState extends State<Cards> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+          backgroundColor: Colors.pink[200],
+          appBar: AppBar(
+            title: Text(
+              "                 NamKaran",
+              style: TextStyle(
+                fontSize: 25,
+              ),
+            ),
+            backgroundColor: Colors.pink,
+          ),
           body: SingleChildScrollView(
-        child: Column(
-          children: [
-            for (var i = 0; i < categorylist.length; i++) showCards(indexno: i)
-          ],
-        ),
-      )),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 30,
+                ),
+                for (var i = 0; i < categorylist.length; i++)
+                  showCards(indexno: i)
+              ],
+            ),
+          )),
     );
   }
 
@@ -44,8 +58,7 @@ class _CardsState extends State<Cards> {
           child: GestureDetector(
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Colors.purple[300]),
+                  borderRadius: BorderRadius.circular(50), color: Colors.pink),
               height: 270,
               width: 270,
               child: Center(
