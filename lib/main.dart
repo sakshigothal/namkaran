@@ -11,9 +11,9 @@ import 'listpage.dart';
 import 'weatherpage.dart';
 import 'whetherapi.dart';
 
-void main() {
-  runApp(MaterialApp(home: NewsApp()));
-}
+// void main() {
+//   runApp(MaterialApp(home: NewsApp()));
+// }
 
 // void main() {
 //   runApp(MaterialApp(home: Cards()));
@@ -22,6 +22,10 @@ void main() {
 // void main() {
 //   runApp(MaterialApp(home: KalyanApiExample()));
 // }
+
+void main() {
+  runApp(MaterialApp(home: WeatherPage()));
+}
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
