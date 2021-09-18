@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:namkaran/cards.dart';
 import 'package:namkaran/newsapp.dart';
+import 'package:namkaran/newspage.dart';
 import 'package:namkaran/splashnamkaram.dart';
+import 'package:namkaran/videodemo.dart';
 
 // import 'cards.dart';
 import 'kalyanapi.dart';
@@ -24,7 +26,7 @@ import 'whetherapi.dart';
 // }
 
 void main() {
-  runApp(MaterialApp(home: WeatherPage()));
+  runApp(MaterialApp(home: VideoDemo()));
 }
 
 class SplashScreen extends StatefulWidget {
