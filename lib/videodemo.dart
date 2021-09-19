@@ -16,7 +16,10 @@ class _VideoDemoState extends State<VideoDemo> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _controller = VideoPlayerController.asset("assets/wp.mp4");
+    // _controller = VideoPlayerController.asset("assets/wp.mp4");
+    _controller = VideoPlayerController.network(
+        "https://vmlane.com/ios/raw/MobileDemo.mp4");
+
     initData();
   }
 

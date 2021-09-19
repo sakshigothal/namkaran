@@ -1,0 +1,18 @@
+{
+  "response_code":"success",
+  "response_message":"",
+  "items":[
+    {
+      "username":"sakshi",
+      "age":20
+    },
+    {
+      "username":"priya",
+      "age":20
+    },
+    {
+      "username":"siya",
+      "age":20
+    }
+    ]
+}

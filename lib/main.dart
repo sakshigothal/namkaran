@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:namkaran/cards.dart';
+import 'package:namkaran/itemsdata.dart';
+import 'package:namkaran/localjsonreader.dart';
 import 'package:namkaran/newsapp.dart';
 import 'package:namkaran/newspage.dart';
 import 'package:namkaran/splashnamkaram.dart';
@@ -26,7 +28,7 @@ import 'whetherapi.dart';
 // }
 
 void main() {
-  runApp(MaterialApp(home: VideoDemo()));
+  runApp(MaterialApp(home: ItemsData()));
 }
 
 class SplashScreen extends StatefulWidget {
